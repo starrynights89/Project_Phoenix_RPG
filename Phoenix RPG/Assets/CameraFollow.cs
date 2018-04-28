@@ -10,15 +10,11 @@ public class CameraFollow : MonoBehaviour {
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        print(player.ToString());
     }
 
     // Update is called once per frame
     void LateUpdate() {
         // Camera Movement
-
-        // If you dont' want the camera to have a smooth panning / turning one,
-        //then just replace the camera look at code with:
-        //  transform.lookt(CameraGoalLookAt);
+        transform.position = player.transform.position;
     }
 }
